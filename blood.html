@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Blood Donation App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="blood.css">
+</head>
+<body>
+
+  <h1>🩸 Blood Donation Finder</h1>
+
+  <!-- Donor Registration -->
+  <form id="donorForm">
+    <h2>Register Donor</h2>
+
+    <label>Name</label>
+    <input type="text" id="name" required>
+
+    <label>Blood Type</label>
+    <select id="bloodType" required>
+      <option value="">Select</option>
+      <option>A+</option><option>A-</option>
+      <option>B+</option><option>B-</option>
+      <option>O+</option><option>O-</option>
+      <option>AB+</option><option>AB-</option>
+    </select>
+
+    <label>District</label>
+    <select id="district" required>
+      <option value="">Select</option>
+      <option>Chennai</option>
+      <option>Coimbatore</option>
+      <option>Madurai</option>
+      <option>Trichy</option>
+      <option>Salem</option>
+    </select>
+
+    <label>Contact Number</label>
+    <input type="tel" id="contact" required>
+
+    <label>Have you donated blood before?</label>
+    <select id="previousDonation">
+      <option value="no">No</option>
+      <option value="yes">Yes</option>
+    </select>
+
+    <div id="previousDateGroup">
+      <label>Previous Donation Date</label>
+      <input type="date" id="previousDonationDate">
+    </div>
+
+    <button type="submit">Register Donor</button>
+  </form>
+
+  <!-- Search -->
+  <div class="search">
+    <h2>Search Donors</h2>
+
+    <label>District</label>
+    <select id="searchDistrict">
+      <option value="">Select</option>
+      <option>Chennai</option>
+      <option>Coimbatore</option>
+      <option>Madurai</option>
+      <option>Trichy</option>
+      <option>Salem</option>
+    </select>
+
+    <label>Blood Type</label>
+    <select id="searchBloodType">
+      <option value="">Select</option>
+      <option>A+</option><option>A-</option>
+      <option>B+</option><option>B-</option>
+      <option>O+</option><option>O-</option>
+      <option>AB+</option><option>AB-</option>
+    </select>
+
+    <button onclick="searchDonor()">Search</button>
+  </div>
+
+  <div id="donorList"></div>
+
+  <script src="blood.js"></script>
+</body>
+</html>
